@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+ <ul>
+    <?php foreach ($tasks as $key => $task): ?>
+    <li> <a href="{{ 'show/'.$key}}"> <?php echo $task ?> </a></li>
+    <?php endforeach; ?>
+</ul>
+
 
 </body>
 </html>

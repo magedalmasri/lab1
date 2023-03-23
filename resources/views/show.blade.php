@@ -7,12 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>  Hello,<?php echo $name; ?> </h1>
 
-    <form  action="store" method="post">
-    @csrf
-    <input type="text" name="name" id="name">
-    <button type="submit"> send </button>
-    </form>
+
+    <h1> <?php echo $task; ?>  </h1>
 </body>
 </html>
