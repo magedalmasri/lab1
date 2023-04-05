@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,7 +36,7 @@ Route::get('/about', function () {
     $name = 'maged';
       return view('about', compact('name'));
     });
-*/
+
 Route::post('/store', function () {
     $name =request('name');
       return view('about', compact('name'));
@@ -60,3 +61,15 @@ Route::get('/show/{id}', function ($id) {
     $task = $tasks[$id];
               return view('show' , compact('task'));
             });
+            */
+
+Route::get('/app', function () {
+            return view('layout.app');
+});
+
+Route::get('/tasks1', function () {
+    return view('tasks1');
+});
+
+Route::get('/', [TaskController::class,'index']);
+Route::post('/store', [TaskController::class,'store']);

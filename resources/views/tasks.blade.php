@@ -12,7 +12,5 @@
     <li> <a href="{{ 'show/'.$key}}"> <?php echo $task ?> </a></li>
     <?php endforeach; ?>
 </ul>
-
-
 </body>
 </html>
